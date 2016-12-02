@@ -1,0 +1,256 @@
+<html>
+	<head>
+		<title>Vobecky Site</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>		
+    	<script type="text/javascript" src="../js/jssor.slider.mini.js"></script>
+		<script src="../js/dropdown.js"></script>
+	</head>
+
+	<body>
+		<div id="container2">
+			<div id="intro_header">
+				<center><a href="../index.html"><img src="../img/logo_top.jpg"></a></center>
+			</div>
+
+			<!-- PRIMARY NAVIGATION -->
+				<div id="nav">
+					<div id="left_nav">
+						<ul class="nav">
+						  <li class="nav"><a href="../construction/index.html">Construction</a></li>
+						  <li class="nav"><a href="about.html">About Us</a></li>
+						  <li class="dropdown">
+						    <a href="services.html" class="dropbtn" onmouseover="myFunction()">Services</a>
+						    <div class="dropdown-content" id="myDropdown">
+						      <a href="designbuild.html">Design Build</a>
+						      <a href="modernization.html">Modernization &amp; Renovation</a>
+						      <a href="building.html">Building - Construction</a>
+						      <a href="pm_staffing.html">Project Mangement &amp; Staffing</a>
+						      <a href="lighting.html">Lighting &amp; Green Energy</a>
+						      <a href="credentials.html">Credentials</a>
+						    </div>
+						  </li>
+						  <li class="nav"><a href="projects.html">Completed Projects</a></li>
+						</ul>
+					</div>
+					<div id="bottom_logo">
+					<a href="../index.html"><img src='../img/bottom_logo.jpg'></a>
+					</div>
+					<div id="right_nav">
+						<ul class="nav">
+						  <li class="nav"><a href="awards.html">Awards</a></li>
+						  <li class="nav"><a href="customers.html">Our Customers</a></li>
+						  <li class="nav"><a href="contact.php">Contact Us</a></li>
+						  <li class="nav"><a href="../logistics/index.html">Logistics</a></li>
+						</ul>
+					</div>
+				</div>
+			<!-- END PRIMARY NAVIGATION -->
+
+<!-- 			<div id="image_header">
+					<img src="img/construction.jpg">
+			</div> -->
+			<div id="gray_header">
+				<h3>VOBECKY ENTERPRISES INC</h3>
+			</div>
+
+			<div id="content2">
+				<div id="left_img">
+						<!-- use jssor.slider.debug.js instead for debug -->
+			    <script>
+			        jQuery(document).ready(function ($) {
+			            
+			            var jssor_1_SlideshowTransitions = [
+			              {$Duration:1200,$Opacity:2}
+			            ];
+			            
+			            var jssor_1_options = {
+			              $AutoPlay: true,
+			              $SlideshowOptions: {
+			                $Class: $JssorSlideshowRunner$,
+			                $Transitions: jssor_1_SlideshowTransitions,
+			                $TransitionsOrder: 1
+			              },
+			              $ArrowNavigatorOptions: {
+			                $Class: $JssorArrowNavigator$
+			              },
+			              $BulletNavigatorOptions: {
+			                $Class: $JssorBulletNavigator$
+			              }
+			            };
+			            
+			            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+			            
+			            //responsive code begin
+			            //you can remove responsive code if you don't want the slider scales while window resizing
+			            function ScaleSlider() {
+			                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+			                if (refSize) {
+			                    refSize = Math.min(refSize, 750);
+			                    jssor_1_slider.$ScaleWidth(refSize);
+			                }
+			                else {
+			                    window.setTimeout(ScaleSlider, 30);
+			                }
+			            }
+			            ScaleSlider();
+			            $(window).bind("load", ScaleSlider);
+			            $(window).bind("resize", ScaleSlider);
+			            $(window).bind("orientationchange", ScaleSlider);
+			            //responsive code end
+			        });
+			    </script>
+
+			    <style>
+			        
+			        /* jssor slider bullet navigator skin 05 css */
+			        /*
+			        .jssorb05 div           (normal)
+			        .jssorb05 div:hover     (normal mouseover)
+			        .jssorb05 .av           (active)
+			        .jssorb05 .av:hover     (active mouseover)
+			        .jssorb05 .dn           (mousedown)
+			        */
+			        .jssorb05 {
+			            position: absolute;
+			        }
+			        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+			            position: absolute;
+			            /* size of bullet elment */
+			            width: 16px;
+			            height: 16px;
+			            background: url('img/b05.png') no-repeat;
+			            overflow: hidden;
+			            cursor: pointer;
+			        }
+			        .jssorb05 div { background-position: -7px -7px; }
+			        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+			        .jssorb05 .av { background-position: -67px -7px; }
+			        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+			        /* jssor slider arrow navigator skin 12 css */
+			        /*
+			        .jssora12l                  (normal)
+			        .jssora12r                  (normal)
+			        .jssora12l:hover            (normal mouseover)
+			        .jssora12r:hover            (normal mouseover)
+			        .jssora12l.jssora12ldn      (mousedown)
+			        .jssora12r.jssora12rdn      (mousedown)
+			        */
+			        .jssora12l, .jssora12r {
+			            display: block;
+			            position: absolute;
+			            /* size of arrow element */
+			            width: 30px;
+			            height: 46px;
+			            cursor: pointer;
+			            background: url('img/a12.png') no-repeat;
+			            overflow: hidden;
+			        }
+			        .jssora12l { background-position: -16px -37px; }
+			        .jssora12r { background-position: -75px -37px; }
+			        .jssora12l:hover { background-position: -136px -37px; }
+			        .jssora12r:hover { background-position: -195px -37px; }
+			        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+			        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+			    </style>
+
+
+			    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden; visibility: hidden;">
+			        <!-- Loading Screen -->
+			        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+			            
+			            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+			            
+			            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+			        </div>
+			        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 500px; height: 300px; overflow: hidden;">
+			            <div data-p="112.50" style="display: none;">
+			                <img data-u="image" src="img/highland-photo.jpg" />
+			            </div>
+			            <div data-p="112.50" style="display: none;">
+			                <img data-u="image" src="img/modernization4.jpg" />
+			            </div>
+			            <div data-p="112.50" style="display: none;">
+			                <img data-u="image" src="img/plaza.jpg" />
+			            </div>
+			            <div data-p="112.50" style="display: none;">
+			                <img data-u="image" src="img/renovation.jpg" />
+			            </div>
+
+			        </div>
+			        <!-- Bullet Navigator -->
+			        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+			            <!-- bullet navigator item prototype -->
+			            <div data-u="prototype" style="width:16px;height:16px;"></div>
+			        </div>
+			        <!-- Arrow Navigator -->
+			        <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+			        <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+			        <a href="http://www.jssor.com" style="display:none">Slideshow Maker</a>
+
+			    </div>
+				</div>
+				
+				<div id="right_content">
+					<h1>Our Customers<h1>
+
+	            <p class="lead">Our partnerships have given Vobecky Enterprises the needed experience to work with the Department of Homeland Security, the United States Army Corps of Engineers, the San Francisco Municipal Railway, the United States Department of Interior, and many more private firms.</p>
+          
+	         </div>
+			</div>
+			<div style="clear:both"></div>
+			<div id="content2">
+				<div class="left_img">
+					<h1>Customers</h1>
+
+					
+					<b>
+					<li class="list">Defense Contract Management Agency (DCMA) </li>
+					<li class="list">Camp Parks Army Base</li>
+					<li class="list">Los Angeles Air Force Base</li>
+					<li class="list">US Department of Interior</li>
+					<li class="list">Sierra Army Depot, Lompoc, CA</li>
+					<li class="list">Clark Construction</li>
+					<li class="list">Highland Hospital Acute, Oakland, CA</li>
+					<li class="list">Crystal Lake, US Forest Service</li>
+					<li class="list">DCMA Federal Building, Los Angeles, CA</li>
+					<li class="list">East Fork Station, US Forest Service</li>
+					<li class="list">Kiewit Pacific, CA</li>
+					<li class="list">Edwards Air Force Base, CA</li>
+					<li class="list">General Services Administrator (GSA)</li>
+					<li class="list">San Francisco Municipal Railway, CA</li>
+					<li class="list">MGM Grand Group Las Vegas, NV</li>
+					<li class="list">LVI Services, CA</li>
+					<li class="list">March Air Force Base</li>
+					<li class="list">San Diego Gas & Electric</li>
+					<li class="list">San Francisco Metro</li>
+					<li class="list">Los Angeles Metro</li>
+					<li class="list">Department of the Navy</li>
+					<li class="list">Trinity Poles</li>
+					<li class="list">Shimmick/FCC/Impregilo</li>
+					<li class="list">Carrara Marble of America, CA</li>
+					<li class="list">North Star Recovery, Nationwide</li>
+					<li class="list">Forth MacArthur</li>
+					<li class="list">Department of the Navy</li>
+					<li class="list">City of Los Angeles</li>
+					<li class="list">And many more...</li>
+				</b>
+				</div>
+
+				<div class="right_content">
+					<center><img src="img/customers-federal.jpg" style="width: 700px; margin-top: 100px;"></center>
+					<center><img src="img/customers-industry.jpg" style="width: 700px;"></center>
+				</div>
+			</div>
+
+			<div style="clear:both"></div>
+			<div id="footer">
+					<p class="footer">&copy; 2006 - 2016 Vobecky Enterprises, Inc.<br />
+					2001 E. Financial Way, Suite 104, Glendora, CA 91741 | (626) 852-5800 <br />
+					DUNS #80-1358693 | California Contractors License #939311 </p>
+			</div>
+		</div>
+	</body>
+</html>
